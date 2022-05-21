@@ -69,8 +69,7 @@ defmodule Rockelivery.ViaCep.ClientTest do
 
       response = Client.get_cep_info(url, cep)
 
-      expected_response =
-        {:error, %Error{result: "Invalid CEP!", status: :bad_request}}
+      expected_response = {:error, %Error{result: "Invalid CEP!", status: :bad_request}}
 
       assert response == expected_response
     end
@@ -92,8 +91,7 @@ defmodule Rockelivery.ViaCep.ClientTest do
 
       response = Client.get_cep_info(url, cep)
 
-      expected_response =
-        {:error, %Error{result: "CEP not found!", status: :not_found}}
+      expected_response = {:error, %Error{result: "CEP not found!", status: :not_found}}
 
       assert response == expected_response
     end
@@ -107,8 +105,7 @@ defmodule Rockelivery.ViaCep.ClientTest do
 
       response = Client.get_cep_info(url, cep)
 
-      expected_response =
-        {:error, %Error{result: :econnrefused, status: :bad_request}}
+      expected_response = {:error, %Error{result: :econnrefused, status: :bad_request}}
 
       assert response == expected_response
     end
