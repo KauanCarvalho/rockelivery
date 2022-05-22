@@ -18,7 +18,7 @@ defmodule Rockelivery.Application do
       RockeliveryWeb.Endpoint,
       # Start a worker by calling: Rockelivery.Worker.start_link(arg)
       # {Rockelivery.Worker, arg}
-      Rockelivery.Orders.ReportRunner
+      # Rockelivery.Orders.ReportRunner
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
